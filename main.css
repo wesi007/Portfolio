@@ -395,6 +395,45 @@ header .follow a:hover{
     text-transform: uppercase;
 }
 
+.contact .icons-container{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.contact .icons-container .icons{
+    flex: 1 1 25rem;
+    text-align: center;
+    padding: 2rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.contact .icons-container .icons i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+}
+
+.contact .icons-container .icons h3{
+    padding: .5rem 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.contact .icons-container .icons p{
+    font-size: 1.5rem;
+    color: #666;
+}
+
+
 
 
 
