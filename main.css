@@ -1,81 +1,133 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-    --primary-color: red;
+    --main-color:#e38528;
 }
+
+
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     outline: none;
     border: none;
+    text-decoration: none;
     text-transform: capitalize;
     transition: all .2s linear;
+    line-height: 1.5;
 }
 
-::selection{
-    background: var(--primary-color);
-    color:#242121;
-}
-
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
 
-
-html::-webkit-scrollbar{
-    width: 2rem;
-}
-
-
-html::-webkit-scrollbar-track{
-    background: #242121;
-}
-
-html::-webkit-scrollbar-thumb{
-    background: var(--primary-color);
-}
-
 body{
+    background: #fcf2e8;
+    padding-left: 30rem;
+}
+
+header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    height: 100%;
-    width:35rem;
-    background: #1a1a1a;
+    bottom: 0;
+    background: #222;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    z-index: 1000;
     flex-flow: column;
+    padding: 8rem 2rem;
+    width: 30rem;
     text-align: center;
-    overflow-x: hidden;
-    padding-bottom: 4rem
 }
 
-header.profile.img{
-    height:18rem;
-    width:18rem;
-    border-radius: 50%;
-    object-fit: justify;
-    margin-bottom: 1rem;
-    border: .7rem solid var(--primary-color);
+header .logo{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bolder;
 }
 
-header.profile .myname{
-    font-size: 3.5rem;
-    color:#fff;
+header .logo span{
+    text-transform: uppercase;
+    color: var(--main-color);
 }
 
-header.profile .myjob{
+header .navbar a{
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    margin: 2rem 0;
+}
+
+header .navbar a:hover{
+    letter-spacing: .2rem;
+    color: var(--main-color);
+}
+
+header .follow a{
     font-size: 2.5rem;
-    color:#eee;
-    font-weight: 300;
+    color: #fff;
+    margin: 0 .7rem;
+}
+
+header .follow a:hover{
+    color: var(--main-color);
+}
+
+#menu-bars{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    body{
+        padding: 0;
+    }
+    #menu-bars{
+        display: initial;
+    }
+    header{
+        left: -120%;
+    }
+    header.active{
+        left: 0%;
+    }
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
 }
 
